@@ -663,10 +663,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   laser: {fileID: 2084493283}
   axe: {fileID: 2256403310101557616, guid: f7f5a3f2bd1201141bb31f03b2813493, type: 3}
-  rotationSpeed: 20
+  rotationSpeed: 40
   laserLength: 2
-  maxAngle: 50
-  minAngle: 0
+  maxAngle: 70
+  minAngle: -20
 --- !u!1 &1307026648
 GameObject:
   m_ObjectHideFlags: 0
