@@ -2,19 +2,23 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Ship : MonoBehaviour
 {
     private Rigidbody2D myRb2D;
     public float speed;
-    float damage = 100;
+    private float totalHealth = 100;
     public AudioClip[] clips = new AudioClip[2];
     private AudioSource myAudioSource;
+    public Slider HealthBar;
+
     // Start is called before the first frame update
     void Start()
     {
         myRb2D = GetComponent<Rigidbody2D>();
         myAudioSource = GetComponent<AudioSource>();
+        HealthBar.value = totalHealth;
     }
 
     // Update is called once per frame
@@ -24,7 +28,7 @@ public class Ship : MonoBehaviour
         vel.x = speed;
         myRb2D.velocity = vel;
 
-        if (damage <= 0)
+        if (totalHealth <= 0)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
@@ -32,9 +36,10 @@ public class Ship : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
+
         if (collision.gameObject.CompareTag("obstacle"))
         {
-            damage -= 10;
+            totalHealth -= 10;
             AudioClip crash = clips[0];
             myAudioSource.PlayOneShot(crash);
             Destroy(collision.gameObject);
@@ -42,10 +47,12 @@ public class Ship : MonoBehaviour
         }
         if (collision.gameObject.CompareTag("poop"))
         {
-            damage -= 2;
+            totalHealth -= 2;
             AudioClip poop = clips[1];
             myAudioSource.PlayOneShot(poop);
             Destroy(collision.gameObject);
         }
+
+        HealthBar.value = totalHealth;
     }
 }
