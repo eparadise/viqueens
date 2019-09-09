@@ -115,7 +115,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -135,4 +135,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   poopPrefab: {fileID: 2727804335875364426, guid: 01018d4eb92b147a39602fef5a2716c8,
     type: 3}
-  speed: 2
+  speed: 1
