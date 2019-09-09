@@ -10,6 +10,7 @@ public class Viking : MonoBehaviour
     public float rotationSpeed;
     public float laserLength;
     public int maxAngle;
+    public int minAngle;
 
 
     private int multiplier = 1;
@@ -25,31 +26,31 @@ public class Viking : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float angle = rotationSpeed * Time.deltaTime;
+
         if (multiplier == 1)
         {
-            ang += angle;
+            ang += rotationSpeed * Time.deltaTime; ;
         }
         else
         {
-            ang -= angle;
+            ang -= rotationSpeed * Time.deltaTime; ;
         }
         if (ang >= maxAngle)
         {
             multiplier = -1;
         }
-        if (ang <= 0)
+        if (ang <= minAngle)
         {
             multiplier = 1;
         }
 
-        Quaternion quat = Quaternion.AngleAxis(multiplier * angle, Vector3.forward);
-        laser.transform.rotation *= quat;
+        Quaternion quat = Quaternion.AngleAxis(ang, Vector3.forward);
+        laser.transform.rotation = quat;
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
             GameObject newAxe = Instantiate(axe, transform.position, Quaternion.identity);
-            newAxe.GetComponent<Axe>().Throw(angle); 
+            newAxe.GetComponent<Axe>().Throw(ang); 
         }
     }
 }

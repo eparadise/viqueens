@@ -7,7 +7,7 @@ public class Ship : MonoBehaviour
 {
     private Rigidbody2D myRb2D;
     public float speed;
-    float damage = 100;
+    public float health = 100;
     public AudioClip[] clips = new AudioClip[2];
     private AudioSource myAudioSource;
     // Start is called before the first frame update
@@ -24,7 +24,7 @@ public class Ship : MonoBehaviour
         vel.x = speed;
         myRb2D.velocity = vel;
 
-        if (damage <= 0)
+        if (health <= 0)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
@@ -34,7 +34,7 @@ public class Ship : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("obstacle"))
         {
-            damage -= 10;
+            health -= 10;
             AudioClip crash = clips[0];
             myAudioSource.PlayOneShot(crash);
             Destroy(collision.gameObject);
@@ -42,7 +42,7 @@ public class Ship : MonoBehaviour
         }
         if (collision.gameObject.CompareTag("poop"))
         {
-            damage -= 2;
+            health -= 2;
             AudioClip poop = clips[1];
             myAudioSource.PlayOneShot(poop);
             Destroy(collision.gameObject);
