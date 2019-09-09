@@ -8,7 +8,7 @@ public class Ship : MonoBehaviour
 {
     private Rigidbody2D myRb2D;
     public float speed;
-    private float totalHealth = 100;
+    public float health = 100;
     public AudioClip[] clips = new AudioClip[2];
     private AudioSource myAudioSource;
     public Slider HealthBar;
@@ -27,8 +27,7 @@ public class Ship : MonoBehaviour
         Vector2 vel = myRb2D.velocity;
         vel.x = speed;
         myRb2D.velocity = vel;
-
-        if (totalHealth <= 0)
+        if (health <= 0)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
@@ -39,7 +38,7 @@ public class Ship : MonoBehaviour
 
         if (collision.gameObject.CompareTag("obstacle"))
         {
-            totalHealth -= 10;
+            health -= 10;
             AudioClip crash = clips[0];
             myAudioSource.PlayOneShot(crash);
             Destroy(collision.gameObject);
@@ -47,7 +46,7 @@ public class Ship : MonoBehaviour
         }
         if (collision.gameObject.CompareTag("poop"))
         {
-            totalHealth -= 2;
+            health -= 2;
             AudioClip poop = clips[1];
             myAudioSource.PlayOneShot(poop);
             Destroy(collision.gameObject);

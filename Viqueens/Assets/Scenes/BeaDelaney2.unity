@@ -291,8 +291,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1075462522}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.84, y: 0.79, z: 0}
-  m_LocalScale: {x: 1.1907262, y: 1.1635906, z: 1}
+  m_LocalPosition: {x: 4.05, y: 1.81, z: 0}
+  m_LocalScale: {x: 1.2145407, y: 1.1868623, z: 1.02}
   m_Children:
   - {fileID: 2084493284}
   m_Father: {fileID: 1522577604}
@@ -312,9 +312,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   laser: {fileID: 2084493283}
   axe: {fileID: 2256403310101557616, guid: f7f5a3f2bd1201141bb31f03b2813493, type: 3}
-  rotationSpeed: 20
+  rotationSpeed: 40
   laserLength: 2
-  maxAngle: 50
+  maxAngle: 70
+  minAngle: -20
 --- !u!1 &1307026648
 GameObject:
   m_ObjectHideFlags: 0
@@ -802,6 +803,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
+  health: 100
   clips:
   - {fileID: 8300000, guid: c52d4c8de2eae462fb7e14dc5b0f5a5d, type: 3}
   - {fileID: 8300000, guid: 7c7b23d7a8bac4f38a975f283c792077, type: 3}
