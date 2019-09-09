@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Ship : MonoBehaviour
 {
@@ -10,11 +11,14 @@ public class Ship : MonoBehaviour
     public float health = 100;
     public AudioClip[] clips = new AudioClip[2];
     private AudioSource myAudioSource;
+    public Slider HealthBar;
+
     // Start is called before the first frame update
     void Start()
     {
         myRb2D = GetComponent<Rigidbody2D>();
         myAudioSource = GetComponent<AudioSource>();
+        HealthBar.value = totalHealth;
     }
 
     // Update is called once per frame
@@ -23,7 +27,6 @@ public class Ship : MonoBehaviour
         Vector2 vel = myRb2D.velocity;
         vel.x = speed;
         myRb2D.velocity = vel;
-
         if (health <= 0)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
@@ -32,6 +35,7 @@ public class Ship : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
+
         if (collision.gameObject.CompareTag("obstacle"))
         {
             health -= 10;
@@ -47,5 +51,7 @@ public class Ship : MonoBehaviour
             myAudioSource.PlayOneShot(poop);
             Destroy(collision.gameObject);
         }
+
+        HealthBar.value = totalHealth;
     }
 }
