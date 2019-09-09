@@ -263,6 +263,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   laser: {fileID: 2084493283}
+  axe: {fileID: 2256403310101557616, guid: f7f5a3f2bd1201141bb31f03b2813493, type: 3}
   rotationSpeed: 20
   laserLength: 2
   maxAngle: 50
@@ -441,6 +442,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1488781036}
   - component: {fileID: 1488781037}
+  - component: {fileID: 1488781038}
   m_Layer: 0
   m_Name: Preview_143
   m_TagString: Untagged
@@ -511,6 +513,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1488781038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1488781035}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6dcd11fd4b293a2438f5373bd274c7fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 7
 --- !u!1 &1522577602
 GameObject:
   m_ObjectHideFlags: 0

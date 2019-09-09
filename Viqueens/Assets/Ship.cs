@@ -6,15 +6,15 @@ using UnityEngine.SceneManagement;
 public class Ship : MonoBehaviour
 {
     private Rigidbody2D myRb2D;
-    private SpriteRenderer sr;
     public float speed;
     float damage = 100;
+    public AudioClip[] clips = new AudioClip[2];
+    private AudioSource myAudioSource;
     // Start is called before the first frame update
     void Start()
     {
         myRb2D = GetComponent<Rigidbody2D>();
-        sr = GetComponent<SpriteRenderer>();
-
+        myAudioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -30,16 +30,22 @@ public class Ship : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Obstacle"))
+        if (collision.gameObject.CompareTag("obstacle"))
         {
             damage -= 10;
+            AudioClip crash = clips[0];
+            myAudioSource.PlayOneShot(crash);
+            Destroy(collision.gameObject);
             
         }
-        if (collision.gameObject.CompareTag("Poop"))
+        if (collision.gameObject.CompareTag("poop"))
         {
             damage -= 2;
+            AudioClip poop = clips[1];
+            myAudioSource.PlayOneShot(poop);
+            Destroy(collision.gameObject);
         }
     }
 }
