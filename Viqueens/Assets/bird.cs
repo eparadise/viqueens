@@ -7,7 +7,7 @@ public class bird : MonoBehaviour
     private Rigidbody2D myRb2D;
     public GameObject poopPrefab;
     public float speed;
-    float timeLeft = 5.0f;
+    float timeLeft = 2.0f;
 
     // Start is called before the first frame update
     void Start()
