@@ -642,7 +642,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1075462522}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.9, y: 0.68, z: 0}
+  m_LocalPosition: {x: 4.08, y: 1.81, z: 0}
   m_LocalScale: {x: 1.1907262, y: 1.1635906, z: 1}
   m_Children:
   - {fileID: 2084493284}
@@ -666,6 +666,7 @@ MonoBehaviour:
   rotationSpeed: 20
   laserLength: 2
   maxAngle: 50
+  minAngle: 0
 --- !u!1 &1307026648
 GameObject:
   m_ObjectHideFlags: 0
@@ -899,7 +900,7 @@ RectTransform:
   m_GameObject: {fileID: 1349320739}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: -0.53261036, y: -0.53261036, z: -0.53261036}
   m_Children:
   - {fileID: 393110610}
   - {fileID: 604095725}
@@ -908,8 +909,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.48146194, y: 0.395}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -344, y: 368}
-  m_SizeDelta: {x: 386.94, y: -10}
+  m_AnchoredPosition: {x: -225.56, y: 232.48}
+  m_SizeDelta: {x: 320.42, y: 17.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1349320741
 MonoBehaviour:
@@ -1244,6 +1245,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
+  health: 100
   clips:
   - {fileID: 8300000, guid: c52d4c8de2eae462fb7e14dc5b0f5a5d, type: 3}
   - {fileID: 8300000, guid: 7c7b23d7a8bac4f38a975f283c792077, type: 3}

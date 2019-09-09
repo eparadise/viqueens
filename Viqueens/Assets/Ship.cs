@@ -18,7 +18,7 @@ public class Ship : MonoBehaviour
     {
         myRb2D = GetComponent<Rigidbody2D>();
         myAudioSource = GetComponent<AudioSource>();
-        HealthBar.value = totalHealth;
+        HealthBar.value = health;
     }
 
     // Update is called once per frame
@@ -52,6 +52,6 @@ public class Ship : MonoBehaviour
             Destroy(collision.gameObject);
         }
 
-        HealthBar.value = totalHealth;
+        HealthBar.value = health;
     }
 }
