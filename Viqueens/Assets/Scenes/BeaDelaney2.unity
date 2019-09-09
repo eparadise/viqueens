@@ -311,6 +311,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   laser: {fileID: 2084493283}
+  axe: {fileID: 2256403310101557616, guid: f7f5a3f2bd1201141bb31f03b2813493, type: 3}
   rotationSpeed: 20
   laserLength: 2
   maxAngle: 50
@@ -622,7 +623,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1522577604}
-  offsetX: 3
+  offsetX: 2
 --- !u!1 &1488781035
 GameObject:
   m_ObjectHideFlags: 0
@@ -1112,7 +1113,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1522577602}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
