@@ -19,14 +19,16 @@ public class Ship : MonoBehaviour
         myRb2D = GetComponent<Rigidbody2D>();
         myAudioSource = GetComponent<AudioSource>();
         HealthBar.value = health;
+        transform.position = new Vector3(Camera.main.transform.position.x - 4, transform.position.y, transform.position.z);
     }
 
     // Update is called once per frame
     void Update()
     {
-        Vector2 vel = myRb2D.velocity;
-        vel.x = speed;
-        myRb2D.velocity = vel;
+        transform.position = new Vector3(Camera.main.transform.position.x - 4, transform.position.y, transform.position.z);
+        //Vector2 vel = myRb2D.velocity;
+        //vel.x = speed;
+        //myRb2D.velocity = vel;
         if (health <= 0)
         {
             myRb2D.gravityScale = 5;
