@@ -49,6 +49,32 @@ public class Axe : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (collision.gameObject.tag == "hammer")
+        {
+            if (ship.GetComponent<Ship>().health <= 95)
+            {
+                ship.GetComponent<Ship>().health += 5;
+            } 
+            else
+            {
+                ship.GetComponent<Ship>().health = 100;
+            }
+            ship.GetComponent<Ship>().HealthBar.value = ship.GetComponent<Ship>().health;
+            Destroy(collision.gameObject);
+        }
+        if (collision.gameObject.tag == "mop")
+        {
+            if (ship.GetComponent<Ship>().health <= 99)
+            {
+                ship.GetComponent<Ship>().health += 1;
+            }
+            else
+            {
+                ship.GetComponent<Ship>().health = 100;
+            }
+            ship.GetComponent<Ship>().HealthBar.value = ship.GetComponent<Ship>().health;
+            Destroy(collision.gameObject);
+        }
         if (collision.gameObject.tag == "obstacle")
         {
             Destroy(collision.gameObject);

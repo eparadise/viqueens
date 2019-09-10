@@ -341,7 +341,7 @@ RectTransform:
   m_Children:
   - {fileID: 1349320740}
   m_Father: {fileID: 1353194305}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -767,7 +767,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: b2c9bf179fb05be4ca9dc1b585722909, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3294af5e273774f90ba38b3d6e32151c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -786,8 +786,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1075462522}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.08, y: 1.81, z: 0}
-  m_LocalScale: {x: 1.1907262, y: 1.1635906, z: 1}
+  m_LocalPosition: {x: 4.18, y: 1.87, z: 0}
+  m_LocalScale: {x: 0.23008402, y: 0.18578818, z: 1}
   m_Children:
   - {fileID: 2084493284}
   m_Father: {fileID: 1522577604}
@@ -806,11 +806,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   laser: {fileID: 2084493283}
-  axe: {fileID: 2256403310101557616, guid: f7f5a3f2bd1201141bb31f03b2813493, type: 3}
+  axe: {fileID: 7526031025586030880, guid: d137e8450b3b648acbae21f2fb23d222, type: 3}
   rotationSpeed: 40
   laserLength: 2
   maxAngle: 70
-  minAngle: -20
+  minAngle: -30
 --- !u!1 &1152463220 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6666932699763987889, guid: 189a3297c8a69fe46b7f1b6eff2623de,
@@ -999,7 +999,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 1050dd02c6000444da41e92c539eaae5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 82614a6dfb98842f3a17788890610105, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1018,8 +1018,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1347650517}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.787059, y: 0.122780606, z: 34.066456}
-  m_LocalScale: {x: 2.2602115, y: 0.50803286, z: 4.0926867}
+  m_LocalPosition: {x: 32.4, y: -5, z: 34.066456}
+  m_LocalScale: {x: 2.612701, y: 5.017357, z: 4.0926867}
   m_Children: []
   m_Father: {fileID: 2084493284}
   m_RootOrder: 0
@@ -1050,18 +1050,18 @@ RectTransform:
   m_GameObject: {fileID: 1349320739}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: -0.53261036, y: -0.53261036, z: -0.53261036}
+  m_LocalScale: {x: 0.98935, y: 0.98935, z: 0.98935}
   m_Children:
   - {fileID: 393110610}
   - {fileID: 604095725}
   m_Father: {fileID: 341165277}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.48146194, y: 0.395}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -225.56, y: 232.48}
-  m_SizeDelta: {x: 320.42, y: 17.7}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0.040410258, y: 0.7975931}
+  m_AnchorMax: {x: 0.47486326, y: 0.94100004}
+  m_AnchoredPosition: {x: 0.5, y: 1.3999977}
+  m_SizeDelta: {x: 5, y: 4}
+  m_Pivot: {x: 0.5, y: 0.49999988}
 --- !u!114 &1349320741
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1221,6 +1221,7 @@ MonoBehaviour:
   - {fileID: 1488781035}
   - {fileID: 620955736}
   - {fileID: 1152463220}
+  speed: 1
 --- !u!1 &1488781035 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6666932699763987889, guid: 189a3297c8a69fe46b7f1b6eff2623de,
@@ -1324,7 +1325,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecbe6f4923d1c4208aab54013546eedc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 4
   health: 100
   clips:
   - {fileID: 8300000, guid: c52d4c8de2eae462fb7e14dc5b0f5a5d, type: 3}
@@ -1776,7 +1776,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1353194305}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1577741679
 MonoBehaviour:
@@ -1790,9 +1790,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5dc18832c10c484dab283fc076340f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hammerPrefab: {fileID: 7132680263012772489, guid: a5e9d640e2a1b4d409cea06d60001a8f,
+  hammerPrefab: {fileID: 3511453175667908802, guid: 86d4ce64bca1e442798f810ba3ccdb07,
     type: 3}
-  mopPrefab: {fileID: 8565944622291172902, guid: 8f0027e59ac0b49709ebdb00f8d52769,
+  mopPrefab: {fileID: 5433552616306066225, guid: 684e34367053d499995f8840cab25f7a,
     type: 3}
   spawnTimer: 5
   distanceMin: -5

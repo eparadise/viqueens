@@ -49,7 +49,7 @@ public class Viking : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            GameObject newAxe = Instantiate(axe, transform.position, Quaternion.identity);
+            GameObject newAxe = Instantiate(axe, transform.position, quat * Quaternion.AngleAxis(-90, Vector3.forward));
             newAxe.GetComponent<Axe>().Throw(ang); 
         }
     }

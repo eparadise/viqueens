@@ -11,6 +11,7 @@ public class CameraController : MonoBehaviour
     private float distanceMoved;
     private float backgroundWidth;
     private int backgroundNumber = 1;
+    public float speed;
 
     // Start is called before the first frame update
     void Start()
@@ -27,8 +28,8 @@ public class CameraController : MonoBehaviour
     void Update()
     {
         Vector3 pos = transform.position;
-        pos.x  += 1 * Time.deltaTime;
-        distanceMoved += 1 * Time.deltaTime;
+        pos.x  += speed * Time.deltaTime;
+        distanceMoved += speed * Time.deltaTime;
         if (distanceMoved >= backgroundWidth)
         {
             Vector3 backgroundPos = backgrounds[backgroundNumber - 1].transform.position;

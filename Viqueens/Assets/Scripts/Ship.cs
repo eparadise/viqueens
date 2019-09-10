@@ -7,7 +7,6 @@ using UnityEngine.UI;
 public class Ship : MonoBehaviour
 {
     private Rigidbody2D myRb2D;
-    public float speed;
     public float health = 100;
     public AudioClip[] clips = new AudioClip[2];
     private AudioSource myAudioSource;
@@ -31,8 +30,8 @@ public class Ship : MonoBehaviour
         //myRb2D.velocity = vel;
         if (health <= 0)
         {
-            myRb2D.gravityScale = 5;
-            //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            //myRb2D.gravityScale = 5;
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
  
     }
