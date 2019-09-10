@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: bd8b2b134f07a41d58034e51687657ec
+guid: 4b001df18e2d94f479cda9513510f0dc
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6566270377373297723
-    second: bird
-  - first:
-      213: -8600252968721611764
-    second: PinClipart.com_seagulls-flying-clipart_3603188_0
+      213: 8530239409142483611
+    second: birdies_0
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -88,59 +85,58 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: bird
+      name: birdies_0
       rect:
         serializedVersion: 2
-        x: 485
-        y: 248
-        width: 123
-        height: 111
+        x: 0
+        y: 0
+        width: 728
+        height: 949
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
+      outline:
+      - - {x: -350, y: 296.5}
+        - {x: -350, y: 400.5}
+        - {x: -229, y: 400.5}
+        - {x: -229, y: 296.5}
+      - - {x: -199, y: 296.5}
+        - {x: -199, y: 400.5}
+        - {x: -77, y: 400.5}
+        - {x: -77, y: 296.5}
+      - - {x: -58, y: 293.5}
+        - {x: -58, y: 400.5}
+        - {x: 67, y: 400.5}
+        - {x: 67, y: 293.5}
+      - - {x: -335, y: 132.5}
+        - {x: -335, y: 237.5}
+        - {x: -227, y: 237.5}
+        - {x: -227, y: 132.5}
+      - - {x: -53, y: 132.5}
+        - {x: -53, y: 239.5}
+        - {x: 67, y: 239.5}
+        - {x: 67, y: 132.5}
+      - - {x: 238, y: 160.5}
+        - {x: 238, y: 280.5}
+        - {x: 358, y: 280.5}
+        - {x: 358, y: 160.5}
+      physicsShape:
+      - - {x: -346, y: 302.5}
+        - {x: -346, y: 407.5}
+        - {x: -226, y: 407.5}
+        - {x: -226, y: 302.5}
+      - - {x: -338, y: 125.5}
+        - {x: -338, y: 241.5}
+        - {x: -217, y: 241.5}
+        - {x: -217, y: 125.5}
       tessellationDetail: 0
       bones: []
-      spriteID: ddcd59f530e4744ee8d7ac1fc128ef03
-      internalID: -6566270377373297723
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PinClipart.com_seagulls-flying-clipart_3603188_0
-      rect:
-        serializedVersion: 2
-        x: 450
-        y: 126
-        width: 121
-        height: 114
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5f247ed61cc566d4787137c05f3ff2a9
-      internalID: -8600252968721611764
+      spriteID: e5191d25e6856904eb1f4f749177de19
+      internalID: 8530239409142483611
       vertices: []
       indices: 
       edges: []

@@ -136,3 +136,7 @@ MonoBehaviour:
   poopPrefab: {fileID: 2727804335875364426, guid: 01018d4eb92b147a39602fef5a2716c8,
     type: 3}
   speed: 1
+  framesPerSecond: 5
+  frames:
+  - {fileID: -6566270377373297723, guid: bd8b2b134f07a41d58034e51687657ec, type: 3}
+  - {fileID: -8600252968721611764, guid: bd8b2b134f07a41d58034e51687657ec, type: 3}
