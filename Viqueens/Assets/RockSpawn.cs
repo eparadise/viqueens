@@ -5,7 +5,7 @@ using UnityEngine;
 public class RockSpawn : MonoBehaviour
 {
     public GameObject rockPrefab;
-    private float timer;
+    private float timer = 9;
     public float spawnTimer;
     public float distanceMin;
     public float distanceMax;
