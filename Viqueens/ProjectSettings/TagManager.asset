@@ -7,6 +7,8 @@ TagManager:
   - obstacle
   - poop
   - Axe
+  - mop
+  - hammer
   layers:
   - Default
   - TransparentFX

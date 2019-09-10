@@ -29,8 +29,10 @@ public class Ship : MonoBehaviour
         myRb2D.velocity = vel;
         if (health <= 0)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            myRb2D.gravityScale = 5;
+            //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
+ 
     }
 
     void OnTriggerEnter2D(Collider2D collision)
