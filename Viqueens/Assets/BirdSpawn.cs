@@ -32,4 +32,5 @@ public class BirdSpawn : MonoBehaviour
 		spawnPosition.z = 0;
 		Instantiate(birdPrefab, spawnPosition, Quaternion.identity);
 	}
+
 }

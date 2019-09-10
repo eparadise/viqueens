@@ -6,8 +6,8 @@ public class CameraController : MonoBehaviour
 {
     public Transform player;
     public float offsetX;
-    public GameObject[] backgrounds; 
-
+    private AudioSource myAudioSource;
+    public GameObject[] backgrounds;
     private float distanceMoved;
     private float backgroundWidth;
     private int backgroundNumber = 1;
