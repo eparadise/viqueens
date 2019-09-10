@@ -31,11 +31,13 @@ public class Axe : MonoBehaviour
         if (collision.gameObject.tag == "hammer")
         {
             ship.GetComponent<Ship>().health += 10;
+            ship.GetComponent<Ship>().HealthBar.value = ship.GetComponent<Ship>().health;
             Destroy(collision.gameObject);
         }
         if (collision.gameObject.tag == "mop")
         {
             ship.GetComponent<Ship>().health += 5;
+            ship.GetComponent<Ship>().HealthBar.value = ship.GetComponent<Ship>().health;
             Destroy(collision.gameObject);
         }
         if (collision.gameObject.tag == "obstacle")
